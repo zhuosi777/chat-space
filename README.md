@@ -19,22 +19,21 @@ Things you may want to cover:
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :groups_users
 - has_many :comments
+- has_many :groups
 
 
-## groupテーブル
+## groupsテーブル
 Column|Type|Options|
 |------|----|-------|
-|group-name|text|null: false|
-|username|string|null: false|
+|name|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-
 ## Association
 - has_many :group_users
-
+- has_many :users
 
 ## groups_usersテーブル
 |column|Type|Options|
@@ -48,7 +47,7 @@ Column|Type|Options|
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
