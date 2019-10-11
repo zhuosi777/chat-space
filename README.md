@@ -13,6 +13,50 @@ Things you may want to cover:
 
 * Database creation
 
+# ChatSpace DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|username|string|null: false|
+### Association
+- has_many :groups_users
+- has_many :comments
+
+
+## groupテーブル
+Column|Type|Options|
+|------|----|-------|
+|group-name|text|null: false|
+|username|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+
+## Association
+- has_many :group_users
+
+
+## groups_usersテーブル
+|column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+
 * Database initialization
 
 * How to run the test suite
