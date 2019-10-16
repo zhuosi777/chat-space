@@ -24,13 +24,13 @@
           font-weight: bold;
             &__menu{
               display: flex;
-              .side-header-box__menu__new{
+              &__new{
                 margin-left: 0.3rem;
                 a {
                   color: white;
                 }
               }
-                .side-header-box__menu__edit{
+                &__edit{
                   margin-left: 0.3rem;
                   a {
                     color: white;
