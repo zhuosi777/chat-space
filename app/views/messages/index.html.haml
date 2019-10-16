@@ -17,14 +17,17 @@
 
     .chat-side-left-groups
       .chat-side-left-group
-        %p.chat-group-name sample-group
-        %p.chat-group-message test
+        %p.chat-side-left-group-name sample-group
+        %p.chat-side-left-group-message test
 
   .chat-side-right
     .chat-side-right-main-header
       .main-header-left-box
+        .main-header-left-box__group-list-box
         %ul.main-header-left-box__group-list test_group
-        %ul.main-header-left-box__member-list Member : zhuosi777
+        .main-header-left-box__member-list-box
+          %ul.list Member :
+          %ul.name zhuosi777
       .main-header-edit-btn Edit
 
     .chat-side-right-main-menu
