@@ -5,10 +5,13 @@
     .chat-side-right-main-header
       .main-header-left-box
         .main-header-left-box__group-list-box
-        %ul.main-header-left-box__group-list test_group
-        .main-header-left-box__member-list-box
-          %ul.list Member :
-          %ul.name zhuosi777
+          = @group.name
+        %ul.main-header-left-box__group-list
+          .main-header-left-box__member-list-box
+            %li.list Member :
+            - @user.each do |user|
+              %li.name
+                = user.name
       .main-header-edit-btn Edit
 
     .messages
