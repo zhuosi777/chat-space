@@ -12,7 +12,8 @@
             - @user.each do |user|
               %li.name
                 = user.name
-      .main-header-edit-btn Edit
+      .main-header-edit-btn
+        = link_to("Edit", edit_group_path(@group))
 
     .messages
       =render @messages
