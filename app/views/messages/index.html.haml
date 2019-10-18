@@ -11,23 +11,14 @@
           %ul.name zhuosi777
       .main-header-edit-btn Edit
 
-    -# .chat-side-right-main-menu
-    -#   .chat-message
-    -#   .chat-message-list
-    -#     %p.chat-message-list__user-name zhuosi777
-    -#     %p.chat-message-list__chat-time 2019/10/11(Fri) 12:04:57
-    -#   .chat-message-list__text text
+    .messages
+      =render @messages
 
-    -#   .chat-message-list
-    -#     %p.chat-message-list__user-name sample_user
-    -#     %p.chat-message-list__chat-time 2019/10/11(Fri) 12:05:32
-    -#   .chat-message-list__text text2
-
-    -# .chat-side-right-from
-    -#   .chat-side-right-from-new
-    -#     %form.chat-side-right-input-box
-    -#       %input.chat-side-right-input-box-text{name: "message[content]", placeholder: "type a message", type: "text"}
-    -#       %label.upload-label{for: "upload-icon"}
-    -#         %i.fa.fa-picture-o
-    -#         %input.upload-label-file{name: :image, type: :file, id: "upload-icon"}
-    -#     .chat-side-right-send-btn send
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
