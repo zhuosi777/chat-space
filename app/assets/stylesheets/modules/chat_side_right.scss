@@ -1,77 +1,13 @@
-// .flash-box{ //フラッシュ画面
-//   background-color: #38AEf0;
-//   height: 25px;
-//   width: 100vw;
-//   color: white;
-//   font-weight: bold;
-//   text-align: center;
-// }
-
-// .chat-side-left{  //ユーザー画面
-//   width: 300px;
-//   float: left;
-//     &-header{
-//       background-color: #253141;
-//       display: flex;
-//       color: white;
-//       height: 100px;
-//       align-items: center;
-//       padding: 0 20px;
-//         .side-header-box{
-//           display: flex;
-//           justify-content: space-between;
-//           width: 100%;
-//           font-weight: bold;
-//             &__menu{
-//               display: flex;
-//               &__new{
-//                 margin-left: 0.3rem;
-//                 a {
-//                   color: white;
-//                 }
-//               }
-//                 &__edit{
-//                   margin-left: 0.3rem;
-//                   a {
-//                     color: white;
-//                   }
-//                 }
-//               }
-//             }
-//           }
-        
-      
-
-
-//     .chat-side-left-groups{  //チャットグループ表示画面
-//       height: calc(100vh - 144px);
-//       background-color: #2f3e51;
-//       color: white;
-//       padding: 20px 20px 0;
-//       overflow: scroll;
-//         .chat-side-left-group{
-//           margin-bottom: 40px;
-//           &-name{
-//             font-size:  15px;
-//             margin-bottom: 5px;
-//               &-message{
-//                 font-size: 11px;
-//               }
-//             }
-//           }
-//         }
-//       }
-
-
 .chat-side-right{  //チャットグループメイン表示画面
   width: calc(100vw - 300px);
   float: left;
+  border-bottom: solid 1px #eee;
   .chat-side-right-main-header{
     height: 100px;
     padding: 0 40px;
+    float: left;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px #eee;
     overflow: scroll;
 
     .main-header-left-box{
@@ -100,7 +36,6 @@
       right: 40px;
       color: #38aef0;
     }
-  }
 
   .chat-side-right-main-menu{  //チャットメイン画面
     height: calc(100vh - 307px);
@@ -175,3 +110,4 @@
         cursor: pointer;
       }
     }
+  }

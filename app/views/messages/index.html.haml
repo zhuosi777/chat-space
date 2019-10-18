@@ -1,25 +1,5 @@
-.flash-box グループを作成しました
 .wrapper
   =render 'shared/side_bar'
-  .chat-side-left
-    .chat-side-left-header
-      .side-header-box
-        %p.side-header-box__user-name zhuosi777
-        %ul.side-header-box__menu
-          %li.side-header-box__menu__new
-            =link_to "#" , class: "contents__btn contents__btn--new" do
-              %i.fa.fa-edit.fa-log
-          
-          %li.side-header-box__menu__edit
-            =link_to "#" , class: "contents__btn contents__btn--edit" do
-              %i.fa.fa-cog
-          
-
-
-    .chat-side-left-groups
-      .chat-side-left-group
-        %p.chat-side-left-group-name sample-group
-        %p.chat-side-left-group-message test
 
   .chat-side-right
     .chat-side-right-main-header
@@ -31,23 +11,23 @@
           %ul.name zhuosi777
       .main-header-edit-btn Edit
 
-    .chat-side-right-main-menu
-      .chat-message
-      .chat-message-list
-        %p.chat-message-list__user-name zhuosi777
-        %p.chat-message-list__chat-time 2019/10/11(Fri) 12:04:57
-      .chat-message-list__text text
+    -# .chat-side-right-main-menu
+    -#   .chat-message
+    -#   .chat-message-list
+    -#     %p.chat-message-list__user-name zhuosi777
+    -#     %p.chat-message-list__chat-time 2019/10/11(Fri) 12:04:57
+    -#   .chat-message-list__text text
 
-      .chat-message-list
-        %p.chat-message-list__user-name sample_user
-        %p.chat-message-list__chat-time 2019/10/11(Fri) 12:05:32
-      .chat-message-list__text text2
+    -#   .chat-message-list
+    -#     %p.chat-message-list__user-name sample_user
+    -#     %p.chat-message-list__chat-time 2019/10/11(Fri) 12:05:32
+    -#   .chat-message-list__text text2
 
-    .chat-side-right-from
-      .chat-side-right-from-new
-        %form.chat-side-right-input-box
-          %input.chat-side-right-input-box-text{name: "message[content]", placeholder: "type a message", type: "text"}
-          %label.upload-label{for: "upload-icon"}
-            %i.fa.fa-picture-o
-            %input.upload-label-file{name: :image, type: :file, id: "upload-icon"}
-        .chat-side-right-send-btn send
+    -# .chat-side-right-from
+    -#   .chat-side-right-from-new
+    -#     %form.chat-side-right-input-box
+    -#       %input.chat-side-right-input-box-text{name: "message[content]", placeholder: "type a message", type: "text"}
+    -#       %label.upload-label{for: "upload-icon"}
+    -#         %i.fa.fa-picture-o
+    -#         %input.upload-label-file{name: :image, type: :file, id: "upload-icon"}
+    -#     .chat-side-right-send-btn send
