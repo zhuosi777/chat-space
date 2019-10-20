@@ -35,15 +35,8 @@ $(document).on('turbolinks:load', function () {
       .done(function (data) {
         var html = buildHTML(data);
         $('.messages').append(html);
-        $('#message_content').val('');
+        $('form')[0].reset();
         scrollBottom();
-        function scrollBottom() {
-          var target = $('.message').last();
-          var position = target.offset().top + $('.messages').scrollTop();
-          $('.messages').animate({
-            scrollTop: position
-          }, 300, 'swing');
-        }
       })
       .fail(function (data) {
         alert('メッセージが送信できませんでした');
@@ -52,4 +45,11 @@ $(document).on('turbolinks:load', function () {
         $('.form__submit').prop('disabled', false);
       })
   })
+  function scrollBottom() {
+    var target = $('.message').last();
+    var position = target.offset().top + $('.messages').scrollTop();
+    $('.messages').animate({
+      scrollTop: position
+    }, 300, 'swing');
+  }
 });
