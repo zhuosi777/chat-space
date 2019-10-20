@@ -3,20 +3,22 @@ $(document).on('turbolinks:load', function () {
 
     var img = message.image ? `<img src= ${message.image}>` : "";
     var html = `<div class="message">
-  <div class="upper-message">
-    <div class="upper-message__user-name">
-      ${message.user_name}
-    </div >
-    <div class="upper-message__date">
-      ${message.data}
-    </div>
-  </div >
-    <div class="lower-message">
-      <div class="lower-message__content">
-        ${message.content}
-      <div>${img}</div>
-  </div >
-</div >`
+                  <div class="upper-message">
+                    <div class="upper-message__user-name">
+                      ${message.user_name}
+                  </div >
+                  <div class="upper-message__date">
+                    ${message.data}
+                  </div>
+                </div >
+                  <div class="lower-message">
+                    <div class="lower-message__content">
+                      ${message.content}
+                    <div>
+                      ${img}
+                    </div>
+                  </div >
+                </div >`
     return html;
   }
 
