@@ -41,7 +41,7 @@
     }
 
 .messages {
-    height: calc(100vh - 190px);
+    height: calc(100vh - 280px);
     width: calc(100vw - 300px);
     padding: 46px 40px;
     background-color: #fafafa;
@@ -56,7 +56,7 @@
           font-weight: bold;
         }
         &__date {
-          color: light_gray;
+          color: $light_gray;
           font-size: 12px;
           padding-left: 10px;
         }
@@ -84,7 +84,8 @@
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      width: calc(100% - 200px);
+      padding: 0 40px 0 10px;
     }
     &__mask {
       background-color: white;
