@@ -1,6 +1,6 @@
 $(document).on("turbolinks:load", function () {
 
-  var search_list = $("#user-search-result");
+  var search_list = $('#user-search-result');
 
 
   function appendUser(user) {
@@ -56,7 +56,7 @@ $(document).on("turbolinks:load", function () {
       })
   });
 
-  $(document).on("click", ".chat-group-user__btn--add", function () {
+  $('#user-search-result').on("click", ".chat-group-user__btn--add", function () {
 
     var name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
@@ -64,7 +64,7 @@ $(document).on("turbolinks:load", function () {
     appendMembers(name, user_id);
   });
 
-  $(document).on("click", ".user-search-remove", function () {
+  $('#chat-group-users').on("click", ".user-search-remove", function () {
     $(this).parent().remove();
   });
 });
