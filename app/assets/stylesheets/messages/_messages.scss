@@ -4,6 +4,7 @@
   float: left;
   .chat-side-right-main-header{
     height: 100px;
+    width: calc(100vw - 380px);
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -12,14 +13,12 @@
 
     .main-header-left-box{
       margin-top: 35px;
-    &__group-list-box
-      &.group-list ul{
+    &__group-list-box{
         font-size: 20px;
         color: #333333;
         margin-bottom: 15px;
       }
-    &__member-list-box{
-      margin-top: 15px;
+    &__member-list-box li{
       display: flex;
       font-size: 12px;
       color: #999999;
@@ -41,7 +40,7 @@
     }
 
 .messages {
-    height: calc(100vh - 280px);
+    height: calc(100vh - 283px);
     width: calc(100vw - 380px);
     padding: 46px 40px;
     background-color: #fafafa;
@@ -76,15 +75,14 @@
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
+    float: left;
     width: calc(100vw - 300px);
     padding: 20px 50px 20px 40px;
-    position: absolute;/*←絶対位置*/
-    bottom: 0; /*下に固定*/
     &__message {
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 200px);
+      width: calc(100vw - 590px);
       padding: 0 40px 0 10px;
     }
     &__mask {
@@ -109,6 +107,7 @@
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+      cursor: pointer;
     }
   }
 }
